@@ -1,1 +1,1 @@
-pre-trained model:
+pre-trained model: https://drive.google.com/file/d/1zNMSn5Lybe3zRyVygWnZNMyKPX0YzIRJ/view?usp=sharing
