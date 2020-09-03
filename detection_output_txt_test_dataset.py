@@ -5,16 +5,15 @@ from tqdm import tqdm
 from mmdet.apis import init_detector, inference_detector
 import os
 
-local_path = "/home/kinsozheng/Desktop/mmdetection/detection_demo"
-config_file = '/home/kinsozheng/Desktop/mmdetection/detection_demo/faster_rcnn_r101_fpn_1x_full_data/faster_rcnn_r101_fpn_1x_full_data.py'
-checkpoint_file = '/home/kinsozheng/Desktop/mmdetection/detection_demo/faster_rcnn_r101_fpn_1x_full_data/epoch_30.pth'
+local_path = "/mmdetection/detection_demo"
+config_file = '/mmdetection/detection_demo/faster_rcnn_r101_fpn_1x_full_data/faster_rcnn_r101_fpn_1x_full_data.py'
+checkpoint_file = '/mmdetection/detection_demo/faster_rcnn_r101_fpn_1x_full_data/epoch_30.pth'
 
 # Model init
 model = init_detector(config_file, checkpoint_file)
 
 # Set test image path
-# path = "/home/kinsozheng/Desktop/txt_to_csv/new_val_img"
-path = "/home/kinsozheng/Desktop/EAD2020-Phase-II-Evaluation/EAD2020-Phase-II-Evaluation/Generalization"
+path = "/EAD2020-Phase-II-Evaluation/EAD2020-Phase-II-Evaluation/Generalization"
 img_list = natsort.natsorted(os.listdir(path))
 
 # Set test txt output path
@@ -29,7 +28,7 @@ txt_path_ = os.path.join(local_path, con_path)
 
 
 # txt_output_path = txt_path_
-txt_output_path = "/home/kinsozheng/Desktop/mmdetection/detection_demo/test_result/Generalization"
+txt_output_path = "/mmdetection/detection_demo/test_result/Generalization"
 if not os.path.exists(txt_output_path):
     os.mkdir(txt_output_path)
 
